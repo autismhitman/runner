@@ -1,0 +1,11 @@
+version: "3"
+services:  
+  flight-reservation:
+    image: neopane2/selenium
+    environment:
+    - BROWSER=chrome
+    - HUB_HOST=hub    
+    - THREAD_COUNT=1   
+    - TEST_SUITE=testng.xml
+    volumes:
+    - ./output/flight-reservation:/home/selenium-docker/test-output     
